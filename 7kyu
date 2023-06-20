@@ -1,0 +1,22 @@
+# https://www.codewars.com/kata/5667e8f4e3f572a8f2000039
+def accum(s):
+    return "-".join([s[i].upper() + (s[i].lower() * i) for i in range(len(s))])
+    # https://www.codewars.com/kata/56541980fa08ab47a0000040
+    def printer_error(s):
+    counts = len(s)
+    error = 0
+    for i in s:
+        if i >= 'a' and i <= 'm':
+            pass
+        else: 
+            error += 1
+    return f'{error}/{counts}'
+    # https://www.codewars.com/kata/5700c9acc1555755be00027e
+    def contain_all_rots(strng, arr):
+    return all(strng[i:] + strng[:i] in arr for i in range(len(strng)))
+    # https://www.codewars.com/kata/58249d08b81f70a2fc0001a4
+    def closest_multiple_10(i):
+    return round(i,-1) 
+    # https://www.codewars.com/kata/5aba780a6a176b029800041c
+    def max_multiple(divisor, bound):
+    return bound - bound % divisor
