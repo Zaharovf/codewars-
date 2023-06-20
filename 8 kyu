@@ -1,0 +1,22 @@
+# https://www.codewars.com/kata/5a00e05cc374cb34d100000d
+def reverse_seq(n):
+    return list(range(n,  0, -1))
+    # https://www.codewars.com/kata/55225023e1be1ec8bc000390
+    def greet(name):
+    if name == "Johnny":
+        return "Hello, my love!"
+    else:
+        return "Hello, {name}!".format(name=name)
+        # codewars.com/users/Zaharovf/completed_solutions
+        def array_plus_array(arr1,arr2):
+ return sum(arr1 + arr2)
+ # https://www.codewars.com/kata/5bb0c58f484fcd170700063d
+ def pillars(num_pill, dist, width):
+    if num_pill == 1:
+        return 0
+    return (num_pill-2)*width + (dist*(num_pill-1)*100)
+    # https://www.codewars.com/kata/559ac78160f0be07c200005a
+    def name_shuffler(str_):
+    names = str_.split()
+    return ' '.join(names[::-1])
+    
