@@ -1,0 +1,68 @@
+## https://www.codewars.com/kata/52449b062fb80683ec000024
+def generate_hashtag(s: str):
+    if s:
+        hashtag = ''.join([i.title() for i in s.split()])
+        return f'#{hashtag}' if len(hashtag) < 140 else False
+    return False
+    
+    # https://www.codewars.com/kata/526dbd6c8c0eb53254000110
+    from string import ascii_lowercase
+
+
+def alphanumeric(password: str) -> bool:
+    if not password:
+        return False
+    for i in password:
+        if (i.lower() in ascii_lowercase) or (i in '0123456789'):
+            continue
+        else:
+            return False
+    return True
+    # https://www.codewars.com/kata/58b38256e51f1c2af0000081
+    def best_match(goals1, goals2):
+    goal_diff = []
+    result = []
+    min_positions = []
+    indexes = []
+    final_indexes = []
+    min_goal_diff = 10000
+    final_ans = 0
+    for i in range(0,len(goals1),1):
+        goal_diff.append(goals1[i]-goals2[i])
+    for i in range(0,len(goals2),1):
+        result.append(int(goals2[i]/goal_diff[i]))
+    for i in range(0,len(goal_diff),1):
+        if(goal_diff[i] < min_goal_diff):
+            min_goal_diff = goal_diff[i]
+    for i in range(0,len(goals2),1):
+        indexes.append(int(goals2[i]/goal_diff[i]))
+    for i in range(0,len(goal_diff),1):
+        if(min_goal_diff == goal_diff[i]):
+            min_positions.append(i)
+            final_indexes.append(indexes[i])
+    if(len(min_positions) == 1):
+        final_ans = min_positions[0]
+    else:
+        for i in range(0,len(min_positions),1):
+            pos = final_indexes.index(max(final_indexes))
+            final_ans = min_positions[pos]
+    return final_ans
+print(best_match([4,3,4],
+                 [1,1,1]))
+                 
+# https://www.codewars.com/kata/525c65e51bf619685c000059
+def cakes(recipe, available):
+    return 5
+
+def cakes(recipe, available):
+    for key in recipe.keys():
+        if key not in available:
+            return 0
+    cake_num = min([available[key] // val for key, val in recipe.items()])
+    return cake_num
+    # https://www.codewars.com/kata/52685f7382004e774f0001f7
+    def make_readable(seconds):
+    h = seconds // 3600
+    m = (seconds - h * 3600) // 60
+    s = seconds - (h * 3600) - (m * 60)
+    return f"{h:0>2d}:{m:0>2d}:{s:0>2d}"
