@@ -1,0 +1,39 @@
+ # https://www.codewars.com/kata/55c45be3b2079eccff00010f
+ def order(sentence):
+    words = []
+    for i in range(1,10):
+        for word in sentence.split():
+            if str(i) in word:
+                words.append(word)
+    return " ".join(words)
+    # https://www.codewars.com/kata/556deca17c58da83c00002db
+    def tribonacci(signature, n):
+	tribo = []
+	if n > 0 and n < 3:
+		for i in range(n):
+			tribo.append(signature[i])
+	elif n >= 3:
+		tribo = signature
+	
+	for i in range(n-3):
+		sum = tribo[i] + tribo[i+1] + tribo[i+2]
+		tribo.append(sum)
+	
+	return tribo
+  # https://www.codewars.com/kata/546f922b54af40e1e90001da
+  def alphabet_position(text):
+    alp = "abcdefghijklmnopqrstuvwxyz"
+    return " ".join([str(alp
+    .find(c) + 1) for c in text.lower() if c in alp])
+    # https://www.codewars.com/kata/5287e858c6b5a9678200083c
+    def narcissistic( value ):
+    total = 0
+    num = str(value)
+    for digit in num:
+        total += int(digit)**len(num)
+    return total == value
+    # https://www.codewars.com/kata/525f50e3b73515a6db000b83
+    def create_phone_number(n):
+    s = "".join([str(i) for i in n])
+    return f"({s[:3]}) {s[3:6]}-{s[6:]}"
+    
